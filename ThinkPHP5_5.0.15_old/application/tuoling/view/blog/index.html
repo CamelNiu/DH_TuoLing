@@ -1,0 +1,39 @@
+{extend name="base/base"}
+{block name="css"}
+    <link href="__HOME_STYLE__/css/learn.css" rel="stylesheet">
+    <link href="__HOME_STYLE__/css/about.css" rel="stylesheet">
+{/block}
+{block name="js"}
+    <script type="text/javascript" src="__HOME_STYLE__/js/blog.js"></script>
+{/block}
+{block name="content"}
+<article>
+  <div class="container">
+    <h2 class="ctitle"><b>技术博客</b> <span>世上只有两种编程语言：一种是总是被人骂的，一种是从来没人用的</span></h2>
+    <div class="container">
+    <h4 class="tt_title"><b><a href="{:url('link/index')}?class_id=5">博客分类</a></b></h4>
+    <div class="rnav">
+      <ul>
+        {foreach $blog_class_soninfo as $val}
+        <li><a href="{:url('classList')}?class_id={$val.class_id}">{$val.class_title}</a></li>
+        {/foreach}
+      </ul>
+    </div>
+  </div>
+    <ul class="cbp_tmtimeline">
+    {foreach $blog_list as $val}
+      <li>
+        <time class="cbp_tmtime"><span>{$val.date}</span> <span>{$val.year}</span></time>
+        <div class="cbp_tmicon"></div>
+        <div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s">
+          <h2>{$val.bloginfo_title}</h2>
+          <p><span class="blogpic"><a href="{:url('content/index')}?bloginfo_id={$val.bloginfo_id}"><img src="__BLOG_IMG__/{$val.bloginfo_img}" onclick="click_blognum({$val.bloginfo_id})"></a></span>{$val.bloginfo_describe}</p>
+          <a href="{:url('content/index')}?bloginfo_id={$val.bloginfo_id}" target="_blank" class="readmore" onclick="click_blognum({$val.bloginfo_id})">点击查看&gt;&gt;</a> </div>
+      </li>
+    {/foreach}
+    </ul>
+    <div class="page"><a title="Total record"><b>107</b> </a><b>1</b><a href="/news/index_2.html">2</a><a href="/news/index_3.html">3</a><a href="/news/index_4.html">4</a><a href="/news/index_5.html">5</a><a href="/news/index_2.html">&gt;</a><a href="/news/index_5.html">&gt;&gt;</a></div>
+  </div>
+  </aside>
+</article>
+{/block}

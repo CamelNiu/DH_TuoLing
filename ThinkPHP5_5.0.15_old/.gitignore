@@ -1,0 +1,8 @@
+.tags
+.tags_sorted_by_file
+runtime/*
+application/database.php
+application/config.php
+application/admin/config.php
+application/index/config.php
+application/tuoling/config.php

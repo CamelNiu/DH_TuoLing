@@ -1,0 +1,16 @@
+###version-1.0.0
+	实现基本功能，home,web,blog,aboutme以及部分上传维护
+###version-1.0.1
+	1，EDIT
+			edit_blog
+			edit_label
+			home_function(前端页面功能，首页圆链接，web页链接推荐，blog页分页样式)
+###version-1.1.0
+	留言板模块
+	英文模块
+	网站访问统计模块
+###version-1.2.0
+	redis模块
+	顶踩模块
+	评论模块
+	前台用户模块

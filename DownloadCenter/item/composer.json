@@ -1,0 +1,14 @@
+{
+    "require": {
+    },
+    "autoload":{
+        "psr-4":{
+            "app\\":"app/",
+            "command\\":"command/",
+            "core\\":"core/"
+        },
+        "files":[
+            "core/fun.php"
+        ]
+    }
+}

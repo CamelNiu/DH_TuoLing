@@ -1,0 +1,30 @@
+{extend name="base/base"}
+{block name="css"}
+    <link href="__HOME_STYLE__/css/learn.css" rel="stylesheet">
+{/block}
+{block name="js"}
+    <script type="text/javascript" src="__HOME_STYLE__/js/link.js"></script>
+{/block}
+{block name="content"}
+<article>
+  <div class="container">
+    <h4 class="tt_title"><b><a href="{:url('link/index')}?class_id=5">链接分类</a></b></h4>
+    <div class="rnav">
+      <ul>
+        {foreach name="$link_class_list" item="val"}
+        <li><a href="{:url('classify')}?class_id={$val.class_id}">{$val.class_title}</a></li>
+        {/foreach}
+      </ul>
+    </div>
+  </div>
+     <h2 class="link_title"><b>{$class_title.class_title}</b></h2>
+     <div class="link_url">
+      <ul>
+        {foreach name="$link_list" item="val"}
+        <li><a href="{$val.link_url}" onclick="click_num({$val.link_id})" target="_blank">{$val.link_title}</a></li>
+        {/foreach}
+      </ul>
+    </div>
+  </aside>
+</article>
+{/block}

@@ -1,0 +1,40 @@
+{extend name="base/base"}
+{block name="css"}
+    <link href="__HOME_STYLE__/css/learn.css" rel="stylesheet">
+{/block}
+{block name="js"}
+    <script type="text/javascript" src="__HOME_STYLE__/js/link.js"></script>
+{/block}
+{block name="content"}
+<article>
+  <div class="container">
+    <h4 class="tt_title"><b><a href="{:url('link/index')}?class_id=5">链接分类</a></b></h4>
+    <div class="rnav">
+      <ul>
+        {foreach name="$link_class_list" item="val"}
+        <li><a href="{:url('classify')}?class_id={$val.class_id}"  target="_blank">{$val.class_title}</a></li>
+        {/foreach}
+      </ul>
+    </div>
+  </div>
+     <h2 class="link_title"><b>常用链接</b></h2>
+     <div class="link_url">
+      <ul>
+        {foreach name="$hot_link_list" item="val"}
+        <li><a onclick="click_num({$val.link_id})" href="{$val.link_url}"  target="_blank">{$val.link_title}</a></li>
+        {/foreach}
+      </ul>
+    </div>
+    {foreach name="$link_classed" item="val"}
+    <h2 class="link_class"><b><a href="{:url('classify')}?class_id={$val.class_id}">{$val.class_title}</a></b></h2>
+     <div class="link_class_url">
+      <ul>
+        {foreach name="$val.link" item="v"}
+        <li><a onclick="click_num({$v.link_id})" href="{$v.link_url}"  target="_blank">{$v.link_title}</a></li>
+        {/foreach}
+      </ul>
+    </div>
+    {/foreach}
+  </aside>
+</article>
+{/block}

@@ -1,0 +1,7 @@
+version-1.1.0(2018/09/08-2018/09/08)
+blog增加网站访问统计模块，由于境外服务器,访问淘宝链接太浪费时间，修改为redis支持php脚本做数据库记录
+注意：
+目前redis支持不好，暂时db键值对和定时脚本刷新做支持
+关键：
+定时curl脚本和数据库建立索引
+* * * * * curl http://www.niushao.net/index.php/visit/visit/trans_visit

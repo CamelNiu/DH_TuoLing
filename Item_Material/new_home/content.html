@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>敦煌的驼铃</title>
+<meta name="keywords" />
+<meta name="description" />
+<link href="css/base.css" rel="stylesheet">
+<link href="css/about.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header>
+  <div id="logo"><a href="/"><h1>WWW.NIUSHAO.NET</h1></a></div>
+  <nav class="topnav" id="topnav">
+    <a href="index.html"><span>首页</span><span class="en">Protal</span></a>
+    <a href="about.html"><span>链接</span><span class="en">About</span></a>
+    <a href="bloglist.html"><span>技术博客</span><span class="en">Life</span></a>
+    <a href="moodlist.html"><span>美文</span><span class="en">Doing</span></a>
+    <a href="niushaoweibo.html"><span>说说</span><span class="en">Share</span></a>
+    <a href="knowledge.html"><span>留言板</span><span class="en">Learn</span></a>
+    <a href="book.html"><span>关于我</span><span class="en">Gustbook</span></a>
+  </nav>
+  </nav>
+</header>
+<article class="aboutcon">
+<h1 class="t_nav"><span>博客详情</span><a href="/" class="n1">博客展示</a><a href="/" class="n2">博客</a></h1>
+<div class="about left">
+    <ul> 
+     <h2>
+    composer安装以及使用
+</h2>
+<h3>
+    <a></a>1，composer简介
+</h3>
+<p style="margin-top:10px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">
+    <strong style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">1&gt;Composer</strong>
+</p>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">    主要就是管理和安装程序中使用到的PHP依赖库，与此同时提供自动加载机制,
+方便依赖库的使用。
+
+    注意:Composer必须是在php5.3之后引入的，所以只有php5.3以后的版本才可以使用</pre>
+<p style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">
+    <strong style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">2&gt;Composer的主要作用</strong>
+</p>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">依赖管理: 程序中使用的php库，交给composer管理
+自动加载: 依赖库中的类以及用户自定义的类，Composer可以提供自动加载</pre>
+<h3>
+    <a></a>2,winsows下安装composer
+</h3>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">1，开启open_ssl服务
+        在php.ini文件中，把注释的extension:extension=php_openssl.dll打开
+    如果没有，直接添加进去即可。
+        php文件夹下的： php_openssl.dll， ssleay32.dll， libeay32.dll 
+    3个文件拷贝到 WINDOWS\system32\文件夹下
+        重启服务器(apache)即可开启open_ssl服务
+
+    注意:检查是否开启，用phpinfo查看即可
+
+2下载windows下composer的安装包(https://getcomposer.org/Composer-Setup.exe)
+    下载完成后点击安装，下一步，下一步，下一步……。值得注意的是composer的安装目要指定在已安装的php.exe文件，
+    如果集成环境，必须是当前版本。
+
+3，绑定环境变量,也就是当前php.exe的同级目录
+
+4，在cmd命令行中检查是否安装成功(composer -V)
+
+5,由于composer类库大部分部署在国外,需要配置中国镜像(加速),具体方法见https://pkg.phpcomposer.com/
+    简而言之就是命令行下执行composer config -g repo.packagist composer https://packagist.phpcomposer.com
+    命令即可,如果没有报错,安装成功</pre>
+<h3>
+    <a></a>3,composer用法以及实战
+</h3>
+<p style="margin-top:10px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">
+    <strong style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">下载第三方扩展库</strong>
+</p>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">搜索地址:https://packagist.org/
+进入页面之后可执行搜索需要的扩展库,点击进入之后可看到此库的说明以及下载
+在项目目录中执行下载语句可加载到此项目中
+
+注:下载的composer的扩展库都在vendor的目录下   
+
+composer.json   composer的配置文件，当前程序关于composer的配置信息
+
+安装方法:
+    1,直接在命令行输入composer require [类库]的方式下载
+    2,在composer.json的require中直接写入需要下载的类库,执行composer update即可</pre>
+<p style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">
+    <strong style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">常用命令</strong>
+</p>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">composer require [需要下载的类库]
+    例如:composer require appbolaget/dd
+         composer require nesbot/carbon
+composer update
+    需要提前在composer.json中定义，可下载可删除
+        {
+            &quot;require&quot;: {
+                &quot;appbolaget/dd&quot;: &quot;^1.1&quot;,
+                &quot;nesbot/carbon&quot;: &quot;^1.22&quot;
+            }
+        }
+composer install
+    直接安装composer.json中定义的条件进行下载类库</pre>
+<p style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">
+    <strong style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">简单示例</strong>
+</p>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">&lt;?php
+header(&#39;content-type:text/html;charset=utf-8&#39;);
+ini_set(&quot;display_errors&quot;,1);
+//使用dd扩展库 This package will add the helper functions dd and dump to your application.
+//引入composer加载文件
+require_once &quot;./vendor/autoload.php&quot;;
+//使用dd友好方式输出并die掉程序函数和dump，友好方式输出函数
+$str = &quot;hello word&quot;;
+$str1 = &quot;NiuShao&quot;;
+$str2 = array(
+    &#39;1&#39;=&gt;&#39;a&#39;,
+    &#39;2&#39;=&gt;&#39;b&#39;,
+    &#39;3&#39;=&gt;&#39;c&#39;,
+);
+/*
+echo $str;
+var_dump($str2);
+dump($str);
+dump($str1);
+dump($str2);
+dd($str2);
+dd($str2);
+*/
+//使用carbon库,注意命名空间
+/*
+dump( Carbon\Carbon::now() );
+dd( Carbon\Carbon::now()-&gt;toDateTimeString());
+*/</pre>
+<h3>
+    <a></a>自动加载
+</h3>
+<p style="margin-top:10px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">
+    <strong style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">简介</strong>
+</p>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">自动加载分三种情况
+    基于PSR-4规范的自动加载
+    基于类目录的自动加载
+    基于函数库文件的自动加载
+
+自动加载使用流程：
+    composer.json中定于自动加载规则
+    使用命令composer dump-autoload生成自动加载文件
+    程序中引入自动加载规则,适用自定义类</pre>
+<p style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">
+    <strong style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">实例说明</strong>
+</p>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">&quot;autoload&quot;:{ 
+&quot;psr-4&quot;:{ 
+    &quot;App\\&quot;:&quot;app/&quot;
+},
+&quot;classmap&quot;:[ 
+    &quot;app/libs&quot;
+],
+&quot;files&quot;:[ 
+    &quot;app/functions/fun.php&quot;
+]
+}
+
+psr-4，是psr-4规则自动加载,引入composer导入文件之后,开启
+命名空间,实例化此类的时候即可自动加载
+classmap:基于类目录自动加载,一般用户没有命名空间的类,实例
+化此目录下类的时候,可自动加载
+files,基于函数库文件的自动加载,一般对一些函数库的辅助函数,
+使用此函数的时候,配置完成即可自动加载</pre>
+<p style="margin-top:15px;margin-right:0px;margin-bottom:15px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">
+    <strong style="margin-top:0px;margin-right:0px;margin-bottom:0px;margin-left:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;">代码实例</strong>
+</p>
+<pre style="margin-top:15px;margin-right:0px;margin-bottom:0px !important;margin-left:0px;padding-top:6px;padding-right:10px;padding-bottom:6px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;font-size:13px;font-family:Consolas, &#39;Liberation Mono&#39;, Courier, monospace;background-color:rgb(248,248,248);border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(204,204,204);border-right-color:rgb(204,204,204);border-bottom-color:rgb(204,204,204);border-left-color:rgb(204,204,204);line-height:19px;">git clone https://github.com/NgauSiuKong/NoteBook.git
+下载即可</pre>
+<p>
+    <br/>
+</p>
+    </ul>
+    <h2>About my blog</h2>
+    <p>Óò  Ãû£ºwww.yangqq.com ´´½¨ÓÚ2011Äê01ÔÂ12ÈÕ <a href="/" class="blog_link" target="_blank">×¢²áÓòÃû</a></p>
+    <p>·þÎñÆ÷£º°¢ÀïÔÆ·þÎñÆ÷<a href="/" class="blog_link" target="_blank">¹ºÂò¿Õ¼ä</a></p>
+    <p>±¸°¸ºÅ£ºÊñICP±¸11002373ºÅ-1</p>
+    <p>³Ì  Ðò£ºPHP µÛ¹úCMS7.0</p>
+</div>
+<aside class="right">  
+    <div class="about_c">
+    <p>博客名<span>DanceSmile</span>linux</p>
+    <p>所属分类 </p>
+    <p>发布日期:1987-10-30</p>
+    <p>链接地址</p>
+    <p>ÏÖ¾Ó£ºÌì½òÊÐ¡ª±õº£ÐÂÇø</p>
+    <p>Ö°Òµ£ºÍøÕ¾Éè¼Æ¡¢ÍøÕ¾ÖÆ×÷</p>
+    <p>Ï²»¶µÄÊé£º¡¶ºìÓëºÚ¡·¡¶ºìÂ¥ÃÎ¡·</p>
+    <p>Ï²»¶µÄÒôÀÖ£º¡¶burning¡·¡¶just one last dance¡·¡¶ÏàË¼Òý¡·</p>
+<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=d4d4a26952d46d564ee5bf7782743a70d5a8c405f4f9a33a60b0eec380743c64">
+<img src="http://pub.idqqimg.com/wpa/images/group.png" alt="ÑîÇà¸öÈË²©¿ÍÍøÕ¾" title="ÑîÇà¸öÈË²©¿ÍÍøÕ¾"></a>
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=HHh9cn95b3F1cHVye1xtbTJ-c3E" ><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_22.png" alt="ÑîÇà¸öÈË²©¿ÍÍøÕ¾"></a>
+</div>     
+</aside>
+</article>
+<footer>
+  <p>Design by DanceSmile <a href="http://www.miitbeian.gov.cn/" target="_blank">ÊñICP±¸11002373ºÅ-1</a> <a href="/">ÍøÕ¾Í³¼Æ</a></p>
+</footer>
+<script src="js/silder.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{extend name="base/base"}
+{block name="css"}
+    <link href="__HOME_STYLE__/css/style.css" rel="stylesheet">
+{/block}
+{block name="js"}
+{/block}
+{block name="content"}
+<article class="blogs">
+<h1 class="t_nav"><span><form action="{:url('blog/bloglist_class')}"　method="get"><input type="text" name="search_key"><input type="hidden" name="id" value="{$class_id}"><input type="submit" value="搜索"></form></span><a href="/" class="n1">博客</a><a href="/" class="n2">列表</a></h1>
+<div class="newblog left">
+    {foreach $blog_list_class as $val}
+   <h2>{$val.bloginfo_title}</h2>
+   <p class="dateview"><span>发布日期:{$val.bloginfo_createtime}</span><span></span><span>类别[<a href="/news/life/">{$val.class_title}</a>]</span></p>
+    <figure><img src="__BLOG_IMG__/{$val.bloginfo_img}"></figure>
+    <ul class="nlist">
+      <p>{$val.bloginfo_describe}...</p>
+      <a title="/" href="{:url('content/index')}?id={$val.bloginfo_id}" target="_blank" class="readmore">查看更多</a>
+    </ul>
+    <div class="line"></div>
+    {/foreach}
+    <div class="blank"></div>
+    <div style="margin:0px auto">
+      <!-- <a title="Total record"><b>41</b></a><b>1</b><a href="/news/s/index_2.html">2</a><a href="/news/s/index_2.html">&gt;</a><a href="/news/s/index_2.html">&gt;&gt;</a> -->
+      {$page}
+    </div>
+</div>
+<aside class="right">
+   <div class="rnav">
+    <h3>
+      <p>分类展示</p>
+    </h3>
+      <ul>
+      {foreach $son_class_list as $val}
+       <li class="rnav1"><a href="{:url('blog/bloglist_class')}?id={$val.class_id}" target="_blank">{$val.class_title}</a></li>
+       {/foreach}
+     </ul>
+    </div>
+    <div class="cloud">
+      <h3>标签</h3>
+      <ul>
+      {foreach $label_list as $val}
+        <li><a href="{:url('blog/labelBlogList')}?id={$val.label_id}">{$val.label_title}</a></li>
+      {/foreach}
+      </ul>
+    </div>
+     <div class="news">
+    <h3>
+      <p>点击<span>排行</span></p>
+    </h3>
+    <ul class="rank">
+    {foreach $blog_click_list as $val}
+      <li><a href="{:url('content/index')}?id={$val.bloginfo_id}" target="_blank">{$val.bloginfo_title}({$val.bloginfo_click})</a></li>
+    {/foreach}
+    </ul>
+    <h3 class="ph">
+      <p>最新<span>发布</span></p>
+    </h3>
+    <ul class="paih">
+    {foreach $blog_new_list as $val}
+      <li><a href="{:url('content/index')}?id={$val.bloginfo_id}" target="_blank">{$val.bloginfo_title}</a></li>
+    {/foreach}
+    </ul>
+    <h3 class="links">
+      <p>常用<span>链接</span></p>
+    </h3>
+    <ul class="website">
+      <li><a href="http://www.github.com" target="_blank">GITHUB</a></li>
+      <li><a href="http://www.linode.com" target="_blank">Linode</a></li>
+      <li><a href="http://www.aliyun.com" target="_blank">阿里云</a></li>
+      <li><a href="http://www.baiduc.com" target="_blank">百度</a></li>
+    </ul>
+    </div>
+    <div class="cloud">
+      <h3>网站导航</h3>
+      <ul>
+      {foreach $link_often_list as $val}
+        <li><a href="{:url('link/click_num')}?url={$val.link_url}&id={$val.link_id}">{$val.link_title}</a></li>
+      {/foreach}
+      </ul>
+    </div>
+    <div class="visitors">
+      <h3><p>访问量</p></h3>
+      <ul>
+
+      </ul>
+    </div>
+     <!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare"><a class="bds_tsina"></a><a class="bds_qzone"></a><a class="bds_tqq"></a><a class="bds_renren"></a><span class="bds_more"></span><a class="shareCount"></a></div>
+    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6574585" ></script>
+    <script type="text/javascript" id="bdshell_js"></script>
+    <script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+    <!-- Baidu Button END -->
+</aside>
+</article>
+{/block}
