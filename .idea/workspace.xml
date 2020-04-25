@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2bce257a-dc1b-4386-8e52-8d18ade9fbe1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/command.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/command.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/command/command/Test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/command/command/Visit.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/command/common.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/command/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/command/controller/Index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/command/model/VisitModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/think" beforeDir="false" afterPath="$PROJECT_DIR$/item/think" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/model/BlogModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/model/BlogModel.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
