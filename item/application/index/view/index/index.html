@@ -1,7 +1,7 @@
 {extend name="base/base"}
 {block name="css"}
-<link href="__HOME_STYLE__/css/index.css" rel="stylesheet">
-<link href="__HOME_STYLE__/css/style.css" rel="stylesheet">
+<link href="{:config('home_style')}/css/index.css" rel="stylesheet">
+<link href="{:config('home_style')}/css/style.css" rel="stylesheet">
 {/block}
 {block name="js"}
 {/block}
@@ -42,7 +42,7 @@
   <div class="bloglist left">
     {foreach $list.index_blog_list as $val}
     <h3>{$val.bloginfo_title}</h3>
-    <figure><img src="__BLOG_IMG__/{$val.bloginfo_img}"></figure>
+    <figure><img src="{:config('blog_img')}/{$val.bloginfo_img}"></figure>
     <ul>
       <p>{$val.bloginfo_describe}...</p>
       <a title="/" href="{:url('blog/index_content')}?param={$val.param}" target="_blank" class="readmore">查看更多</a>

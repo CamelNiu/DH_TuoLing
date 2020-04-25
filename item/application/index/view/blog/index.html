@@ -1,6 +1,6 @@
 {extend name="base/base"}
 {block name="css"}
-    <link href="__HOME_STYLE__/css/style.css" rel="stylesheet">
+    <link href="{:config('home_style')}/css/style.css" rel="stylesheet">
 {/block}
 {block name="js"}
 {/block}
@@ -11,7 +11,7 @@
     {foreach $list.blog_list.blog_list as $val}
    <h2>{$val.bloginfo_title}</h2>
    <p class="dateview"><span>发布日期:{$val.created_at}</span><span></span><span>类别[<a href="/news/life/">{$val.class_title}</a>]</span></p>
-    <figure><img src="__BLOG_IMG__/{$val.bloginfo_img}"></figure>
+    <figure><img src="{:config('blog_img')}/{$val.bloginfo_img}"></figure>
     <ul class="nlist">
       <p>{$val.bloginfo_describe}...</p>
       <a title="/" href="{:url('blog/index_content')}?param={$val.param}" target="_blank" class="readmore">查看更多</a>

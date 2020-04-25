@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="2bce257a-dc1b-4386-8e52-8d18ade9fbe1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/index/config_backups.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/config_backups.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/config/extra/redis.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/config/extra/redis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/think" beforeDir="false" afterPath="$PROJECT_DIR$/item/think" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/config_backups.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/controller/Common.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/controller/Common.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/view/aboutme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/view/aboutme/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/view/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/view/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/view/blog/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/view/blog/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/view/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/view/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/view/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/view/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/view/link/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/view/link/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/view/message/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/view/message/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

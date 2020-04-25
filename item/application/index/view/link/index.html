@@ -1,6 +1,6 @@
 {extend name="base/base"}
 {block name="css"}
-    <link href="__HOME_STYLE__/css/link.css" rel="stylesheet">
+    <link href="{:config('home_style')}/css/link.css" rel="stylesheet">
 {/block}
 {block name="js"}
 {/block}
@@ -11,12 +11,12 @@
       <p><span>网站</span>导航</p>
     </h3>
     <ul>
-      <li><a href="http://www.github.com"  target="_blank"><img src="__HOME_STYLE__/images/01.jpg"></a><span>GitHub</span></li>
-      <li><a href="/" target="_blank"><img src="__HOME_STYLE__/images/02.jpg"></a><span></span></li>
-      <li><a href="/"  target="_blank"><img src="__HOME_STYLE__/images/03.jpg"></a><span></span></li>
-      <li><a href="/" target="_blank"><img src="__HOME_STYLE__/images/04.jpg"></a><span></span></li>
-      <li><a href="/"  target="_blank"><img src="__HOME_STYLE__/images/02.jpg"></a><span></span></li>
-      <li><a href="/"  target="_blank"><img src="__HOME_STYLE__/images/03.jpg"></a><span></span></li>
+      <li><a href="http://www.github.com"  target="_blank"><img src="{:config('home_style')}/images/01.jpg"></a><span>GitHub</span></li>
+      <li><a href="/" target="_blank"><img src="{:config('home_style')}/images/02.jpg"></a><span></span></li>
+      <li><a href="/"  target="_blank"><img src="{:config('home_style')}/images/03.jpg"></a><span></span></li>
+      <li><a href="/" target="_blank"><img src="{:config('home_style')}/images/04.jpg"></a><span></span></li>
+      <li><a href="/"  target="_blank"><img src="{:config('home_style')}/images/02.jpg"></a><span></span></li>
+      <li><a href="/"  target="_blank"><img src="{:config('home_style')}/images/03.jpg"></a><span></span></li>
     </ul>
   </div>
 </div>

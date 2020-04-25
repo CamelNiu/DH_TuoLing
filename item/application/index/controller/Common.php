@@ -17,10 +17,10 @@ class Common extends controller
     protected $frame_cache_file_obj;
     public function __construct()
     {
-
         parent::__construct();
         //监听访问信息
         Visit::listen();
+
 
         $this->get_ip_obj = new GetIp;
         $this->frame_cache_redis_obj = new Redis;
@@ -89,18 +89,18 @@ class Common extends controller
         //获取ip,作为redis的key
         $ip_info = $this->get_ip_obj->get_ip();
         $ip = $ip_info['ip'];
-        if($this->frame_cache_file_obj->has($ip)){
-            if( $this->frame_cache_file_obj->get($ip)>6 ){
-                $log_arr['ip'] = $ip;
-                $log_arr['msg'] = 'this ip click too rapid';
-                $log = '[Common][click_num]['.json_encode($log_arr).']';
-                WL($log,'Common');
-                $this->error("点击过快，请慢点刷新");
-            }
-            $this->frame_cache_file_obj->inc($ip);
-        }else{
-            $this->frame_cache_file_obj->set($ip,'1',5);
-        }
+//        if($this->frame_cache_file_obj->has($ip)){
+//            if( $this->frame_cache_file_obj->get($ip)>6 ){
+//                $log_arr['ip'] = $ip;
+//                $log_arr['msg'] = 'this ip click too rapid';
+//                $log = '[Common][click_num]['.json_encode($log_arr).']';
+//                WL($log,'Common');
+//                $this->error("点击过快，请慢点刷新");
+//            }
+//            $this->frame_cache_file_obj->inc($ip);
+//        }else{
+//            $this->frame_cache_file_obj->set($ip,'1',5);
+//        }
     }
 
 }
