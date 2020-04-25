@@ -13,6 +13,7 @@
 
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
+define('ENV','dev');
 //引入composer加载的文件
 require realpath(__DIR__.'/../vendor/autoload.php');
 

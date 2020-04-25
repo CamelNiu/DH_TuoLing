@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2bce257a-dc1b-4386-8e52-8d18ade9fbe1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/item/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThinkPHP5_5.0.15_old/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ThinkPHP5_5.0.15_old/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ThinkPHP5_5.0.15_old/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/ThinkPHP5_5.0.15_old/public/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
