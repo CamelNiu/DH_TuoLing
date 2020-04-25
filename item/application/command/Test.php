@@ -4,6 +4,9 @@ use think\console\Command;
 use think\console\Input;
 use think\console\Output;
 use think\Db;
+use think\Config;
+
+
 class Test extends Command
 {
     protected function configure()
@@ -12,6 +15,6 @@ class Test extends Command
     }
     protected function execute(Input $input, Output $output)
     {
-        var_dump(CONF_PATH);
+        print_r(Config::get('database'));
     }
 }

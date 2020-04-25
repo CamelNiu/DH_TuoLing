@@ -1,5 +1,5 @@
 <?php
 return [
-'app\command\Visit',
-'app\command\Test',
+    'app\command\Visit',
+    'app\command\Test',
 ];
