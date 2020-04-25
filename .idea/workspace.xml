@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bce257a-dc1b-4386-8e52-8d18ade9fbe1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/DH_TuoLing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/index/view/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/view/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/command.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/command.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/command/command/Test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/command/command/Visit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/command/common.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/command/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/command/controller/Index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/command/model/VisitModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/think" beforeDir="false" afterPath="$PROJECT_DIR$/item/think" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +39,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
