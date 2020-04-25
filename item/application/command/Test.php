@@ -15,6 +15,8 @@ class Test extends Command
     }
     protected function execute(Input $input, Output $output)
     {
-        print_r(Config::get('database'));
+        Config::set('abd','def');
+        var_dump(CONF_PATH.'redis.php');
+        var_dump(Config::get('redis'));
     }
 }

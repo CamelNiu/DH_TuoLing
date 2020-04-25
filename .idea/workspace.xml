@@ -3,17 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2bce257a-dc1b-4386-8e52-8d18ade9fbe1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/build.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/command.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/.htaccess" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/item/application/command/Test.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/command/Test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/config_backups.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/database_backups.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/route.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/application/tags.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/config/command.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/config/command.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/config/common.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/controller/Common.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/controller/Common.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/application/index/controller/Index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item/config/redis.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/config/redis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/config/redis.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/item/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/think" beforeDir="false" afterPath="$PROJECT_DIR$/item/think" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/item/thinkphp/library/think/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/item/thinkphp/library/think/Config.php" afterDir="false" />
     </list>
