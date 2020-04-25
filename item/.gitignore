@@ -1,7 +1,5 @@
-application/config.php
-application/database.php
 .tags
 .tags_sorted_by_file
-application/console/database.php
-application/index/config.php
+config/config.php
+config/database.php
 runtime/
