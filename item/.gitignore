@@ -4,3 +4,4 @@ config/config.php
 config/database.php
 runtime/
 .idea
+config/index/config.php
