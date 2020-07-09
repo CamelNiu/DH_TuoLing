@@ -32,9 +32,10 @@ class Common extends controller
     {
         $M_category = new CategoryModel;
         $top_class_list = $M_category->get_class_list_by_fid(0,'class_title,class_Etitle,url');
-        $top_class_list = array_map(function($v){
+        $host = isset($_SERVER['PROXY_DOMAIN']) ? $_SERVER['PROXY_DOMAIN']:$_SERVER['HTTP_HOST'];
+        $top_class_list = array_map(function($v)use($host){
             if(empty($v['url'])){
-                $v['url'] = "http://".$_SERVER['HTTP_HOST'].Url::build("".$v['class_Etitle']."/index");
+                $v['url'] = "http://".$host.Url::build("".$v['class_Etitle']."/index");
             }
             return $v;
         },$top_class_list);
