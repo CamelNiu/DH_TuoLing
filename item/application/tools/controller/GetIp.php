@@ -3,7 +3,7 @@ namespace app\tools\controller;
 
 class GetIp
 {
-    public static function get_ip()
+    public static function getHostIp()
     {
         try {
             $realip = '';
@@ -47,4 +47,19 @@ class GetIp
         }
         return ['code' => $code,'msg' => $msg,'ip' => $realip];
     }
+
+
+    public function get_ip()
+    {
+
+        $ip = isset($_SERVER['HTTP_X_REAL_IP']) ? $_SERVER['HTTP_X_REAL_IP'] : ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : "" );
+
+        if(empty($ip)){
+            $ips = $this->getHostIp();
+            $ip = isset($ips['ip']) ? $ips['ip'] : '';
+        }
+
+        return ['code' => 0,'msg' => 'ok','ip' => $ip];
+    }
+
 }
