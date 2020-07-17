@@ -24,7 +24,7 @@ class visitLog
     public function run()
     {
 
-        $ifDebug = 1;
+        $ifDebug = 0;
 
         if($ifDebug){
 
@@ -44,13 +44,12 @@ class visitLog
                     WL($msg,$this->logNameError);
 
                 }
+
+                usleep(100000);
+
             }
 
         }
-
-
-
-
 
     }
 
@@ -106,6 +105,7 @@ class visitLog
         }
 
         $visitLog = [
+            'keys'     => $keys,
             'ip'       => getArr($ipInfo,'ip','-'),
             'url'      => getArr($visitInfo,'url','-'),
             'country'  => getArr($ipInfo,'country_name','-'),
