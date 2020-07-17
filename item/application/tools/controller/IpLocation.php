@@ -16,7 +16,7 @@ class IpLocation
 
     static private function getIpDataFile()
     {
-        return ROOT_PATH.self::$path[0];
+        return ROOT_PATH.self::$path[1];
     }
 
     static public function getIpLocation($ip = "")
