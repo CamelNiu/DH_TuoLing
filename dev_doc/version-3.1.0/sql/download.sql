@@ -21,3 +21,7 @@ create unique index idx_class_title on ns_class (class_title);
 
 alter table ns_download_center add `name_cn` varchar(255) not null default "--";
 alter table ns_download_center add `remark` varchar(225) not null default "--";
+
+
+alter table ns_visit_log modify `time` datetime not null default "1000-01-01 00:00:00";
+alter table ns_visit_log_cache modify `status` enum('y','n','x') NOT NULL DEFAULT 'n' comment "n没有处理，y已经处理，x识别ip出错",

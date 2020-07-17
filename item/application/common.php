@@ -23,3 +23,17 @@ function WL($msg,$log_name)
     $msg = '['.$date_time.'] '.$msg.PHP_EOL;
     file_put_contents($file,$msg,FILE_APPEND);
 }
+
+/**
+ * [getArr description]
+ * @Author   [NiuShao                   <camel_niu@163.com> <qq:370574131>]
+ * @DateTime [2020-07-17T20:11:24+0800]
+ * @param    [type]                     $arr                [description]
+ * @param    [type]                     $index              [description]
+ * @param    string                     $default            [description]
+ * @return   [type]                                         [description]
+ */
+function getArr($arr,$index,$default="")
+{
+    return isset($arr[$index]) ? ( ($arr[$index] === "") ? $default : $arr[$index] ) : $default;
+}
