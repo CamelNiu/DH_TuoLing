@@ -6,8 +6,8 @@ use GeoIp2\Database\Reader;
 class IpLocation
 {
     static private $path = [
-        "public/static/GeoLite2/GeoLite2-City_20200714/GeoLite2-City.mmdb",
-        "public/static/GeoLite2/GeoLite2-City_20180703/GeoLite2-City.mmdb",
+        '20200714' => "public/static/GeoLite2/GeoLite2-City_20200714/GeoLite2-City.mmdb",
+        '20180703' => "public/static/GeoLite2/GeoLite2-City_20180703/GeoLite2-City.mmdb",
     ];
 
     static private $logName = "ipLocation";
@@ -16,7 +16,7 @@ class IpLocation
 
     static private function getIpDataFile()
     {
-        return ROOT_PATH.self::$path[1];
+        return ROOT_PATH.self::$path['20200714'];
     }
 
     static public function getIpLocation($ip = "")
