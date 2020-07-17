@@ -6,13 +6,13 @@ class Visit
 {
     public static function listen($type = 0)
     {
-
+        $host = \app\service\Server::getHost();
         $ip_obj = new GetIp;
         $ip = $ip_obj->get_ip();
         $ip = isset($ip['ip'])?(empty($ip['ip'])?'ip is empty':$ip['ip']):'ip is not set';
         $info['time'] = time();
         $info['microtime'] = microtime(true);
-        $info['url'] = 'http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+        $info['url'] = 'http://'.$host.$_SERVER["REQUEST_URI"];
         $info['ip'] = $ip;
         $data['type'] = $type;
         $data['keys'] = md5($ip.microtime());
