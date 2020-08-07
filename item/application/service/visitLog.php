@@ -55,7 +55,7 @@ class visitLog
 
     private function execVisit()
     {
-        $vstLogCacheInfo = $this->visitLogCache->getList('data,keys',['status'=>'n']);
+        $vstLogCacheInfo = $this->visitLogCache->getList('data,keys',['status'=>'n'],['limit'=>2000]);
 
         if(empty($vstLogCacheInfo)){
             return;
