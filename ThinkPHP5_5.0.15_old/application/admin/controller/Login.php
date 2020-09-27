@@ -17,9 +17,13 @@ class Login extends controller
         $post_admin_password = trim(input('post.admin_password'),'');
         $data_password = Db::query("select admin_password,admin_id from ns_admin where admin_name='{$post_admin_name}'");
         if(empty($data_password[0])){
+            $msg = sprintf('[ pwd empty ]admin is %s password is %s',$post_admin_name,$post_admin_password);
+            WL($msg,'loginCheck');
             $this->error();
         }
         if($data_password[0]['admin_password'] != md5($post_admin_password)){
+            $msg = sprintf('[ pwd error ]admin is %s password is %s',$post_admin_name,$post_admin_password);
+            WL($msg,'loginCheck');
             $this->error();
         }
         $admin_info['admin_id'] = $data_password[0]['admin_id'];
@@ -27,6 +31,8 @@ class Login extends controller
         $admin_info['admin_name'] = $post_admin_name;
         $admin_info_str = serialize($admin_info);
         Cookie::set('admin_info',$admin_info);
+        $msg = sprintf('[ success ]admin is %s password is %s',$post_admin_name,$post_admin_password);
+        WL($msg,'loginCheck');
         $this->redirect('Index/index');
     }
     public function login_status()
