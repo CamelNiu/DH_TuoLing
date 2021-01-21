@@ -19,7 +19,7 @@ class Common extends controller
     {
         parent::__construct();
         //监听访问信息
-        Visit::listen();
+        //Visit::listen();
 
 
         $this->get_ip_obj = new GetIp;
