@@ -6,9 +6,9 @@ if( ENV == 'dev' ){
 
 
     return [
-        'home_style' => 'http://127.0.0.1:8080/www/DH_TuoLing/item/public/static/IndexStyle',
-        'homepage_img' => 'http://127.0.0.1:8080/www/DH_TuoLing/item/public/uploads/HomepageImg',
-        'blog_img'=> 'http://127.0.0.1:8080/www/DH_TuoLing/item/public/uploads/BlogsImg'
+        'home_style' => 'http://47.96.154.46/static.niushao.net/index/static/IndexStyle',
+        'homepage_img' => 'http://47.96.154.46/static.niushao.net/index/uploads/HomepageImg',
+        'blog_img'=> 'http://47.96.154.46/static.niushao.net/index/uploads/BlogsImg'
     ];
 }
 
